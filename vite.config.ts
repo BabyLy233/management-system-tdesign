@@ -7,7 +7,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import WindiCSS from 'vite-plugin-windicss';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
-import { createHtmlPlugin } from 'vite-plugin-html'
+import { createHtmlPlugin } from 'vite-plugin-html';
 import { TDesignResolver } from 'unplugin-vue-components/resolvers';
 
 const CWD = process.cwd();
