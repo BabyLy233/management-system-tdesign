@@ -1,22 +1,49 @@
 <template>
   <t-aside>
-    <t-menu theme="light" default-value="item1" style="margin-right: 40px" height="550px" @change="changeHandler">
+    <t-menu
+      theme="light"
+      :value="currentName"
+      :default-value="currentName"
+      style="margin-right: 40px"
+      height="550px"
+      @change="changeHandler"
+    >
       <template #logo>
-        <img src="@/assets/ly-logo.jpg" alt="logo" height="64px" />
+        <img class="cursor-pointer" src="@/assets/ly-logo.png" alt="logo" height="64px" @click="goHome(router)" />
       </template>
-      <t-menu-item value="item1"> 仪表盘 </t-menu-item>
-      <t-menu-item value="item2"> 资源列表 </t-menu-item>
-      <t-menu-item value="item3"> 根目录 </t-menu-item>
-      <t-menu-item value="item4" :disabled="true"> 调度平台 </t-menu-item>
-      <t-menu-item value="item5"> 精准监控 </t-menu-item>
-      <t-menu-item value="item6"> 消息区 </t-menu-item>
-      <t-menu-item value="item7"> 个人中心 </t-menu-item>
-      <t-menu-item value="item8"> 视频区 </t-menu-item>
-      <t-menu-item value="item9"> 资源编辑 </t-menu-item>
+      <template #operations>
+        <span class="text-indigo-500 text-lg">
+          {{ appTitle + '&emsp;' + appVersion }}
+        </span>
+      </template>
+      <t-menu-item :value="item.name" v-for="item in menuItems">
+        <template #icon>
+          <t-icon :name="item.meta?.icon" />
+        </template>
+        {{ item.meta?.title }}
+      </t-menu-item>
     </t-menu>
   </t-aside>
 </template>
 
 <script setup lang="ts">
-const changeHandler = () => {};
+import { ref, watch } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
+import type { MenuValue } from 'tdesign-vue-next';
+import { appTitle, appVersion } from '@/utils/constant';
+import { goHome, getMenuItem } from '@/utils/usePage';
+
+const router = useRouter();
+const route = useRoute();
+const menuItems = getMenuItem();
+const currentName = ref<string | unknown>(route.name);
+
+watch(
+  () => route.name as string,
+  (newName) => (currentName.value = newName),
+);
+
+const changeHandler = (value: MenuValue) => {
+  router.push(`/home/${value}`);
+};
 </script>
