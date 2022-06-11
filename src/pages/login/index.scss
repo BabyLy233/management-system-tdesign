@@ -1,0 +1,20 @@
+#page-login {
+  min-height: 100vh;
+  background-image: url('@/assets/login-bg.jpg');
+  padding-top: 10rem;
+
+  .comp-loginForm {
+    margin-left: 15rem;
+    width: 450px;
+    background-color: #ffffff60;
+    padding: 50px;
+  }
+
+  .div-title {
+    margin-bottom: 20px;
+  }
+
+  .div-dynamic-desc {
+    width: fit-content;
+  }
+}
