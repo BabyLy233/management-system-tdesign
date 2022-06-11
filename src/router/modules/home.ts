@@ -18,6 +18,16 @@ const homeRoutes: RouteRecordRaw[] = [
         component: () => import('@/pages/dashboard/index.vue'),
         meta: {
           title: '仪表盘',
+          icon: 'dashboard',
+        },
+      },
+      {
+        path: 'cashier',
+        name: 'cashier',
+        component: () => import('@/pages/cashier/index.vue'),
+        meta: {
+          title: '收银台',
+          icon: 'money-circle',
         },
       },
     ],
