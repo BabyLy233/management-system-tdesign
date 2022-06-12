@@ -3,6 +3,7 @@ import type { RouteRecordRaw } from 'vue-router';
 
 import { appTitle } from '@/utils/constant';
 import homeRoutes from './modules/home';
+import LayOut from '@/layout/index.vue';
 
 declare module 'vue-router' {
   interface RouteMeta {
@@ -27,6 +28,21 @@ export const defaultRouteList: RouteRecordRaw[] = [
     meta: {
       title: '登录页',
     },
+  },
+  {
+    path: '/:e+',
+    name: 'error',
+    component: LayOut,
+    children: [
+      {
+        path: '/:w+',
+        name: '404Page',
+        component: () => import('@/pages/error/404Page.vue'),
+        meta: {
+          title: '404',
+        },
+      },
+    ],
   },
 ];
 

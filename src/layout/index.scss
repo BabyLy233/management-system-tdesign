@@ -1,5 +1,49 @@
 .t-layout {
-  min-height: 100vh;
+  min-height: calc(100vh);
+  overflow-y: hidden;
+}
+
+.t-layout__content {
+  min-height: calc(100vh - 163px);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 94%;
+  margin: 20px auto 0 auto;
+}
+
+.s-layout {
+  height: calc(100vh - 64px);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.t-layout__header {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.t-layout__sider {
+  height: 100vh;
+}
+
+.inner-layout {
+  height: calc(100vh - 64px);
+  overflow-y: scroll;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+}
+.fade-enter-active {
+  transition: all 0.5s ease;
+}
+.fade-leave-active {
+  transition: all 0.1s cubic-bezier(1, 0.6, 0.6, 1);
 }
 
 .fade-enter-from,

@@ -7,12 +7,15 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TAffix: typeof import('tdesign-vue-next')['Affix']
     TAside: typeof import('tdesign-vue-next')['Aside']
     TAvatar: typeof import('tdesign-vue-next')['Avatar']
     TButton: typeof import('tdesign-vue-next')['Button']
+    TCard: typeof import('tdesign-vue-next')['Card']
     TCol: typeof import('tdesign-vue-next')['Col']
     TConfigProvider: typeof import('tdesign-vue-next')['ConfigProvider']
     TContent: typeof import('tdesign-vue-next')['Content']
+    TDivider: typeof import('tdesign-vue-next')['Divider']
     TDropdown: typeof import('tdesign-vue-next')['Dropdown']
     TextLink: typeof import('./src/components/text-link/index.vue')['default']
     TFooter: typeof import('tdesign-vue-next')['Footer']
@@ -25,6 +28,7 @@ declare module '@vue/runtime-core' {
     TMenu: typeof import('tdesign-vue-next')['Menu']
     TMenuItem: typeof import('tdesign-vue-next')['MenuItem']
     TRow: typeof import('tdesign-vue-next')['Row']
+    TTable: typeof import('tdesign-vue-next')['Table']
   }
 }
 

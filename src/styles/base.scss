@@ -4,9 +4,9 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
 }
 
 #app {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
 }
