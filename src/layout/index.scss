@@ -2,6 +2,27 @@
   min-height: 100vh;
 }
 
+.t-layout__content {
+  min-height: calc(100vh - 163px);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 94%;
+  margin: 20px auto 0 auto;
+}
+
+.s-layout {
+  height: calc(100vh - 64px);
+}
+
+.t-layout__sider {
+  height: 100vh;
+}
+
+.inner-layout {
+  height: calc(100vh - 64px);
+  overflow-y: scroll;
+}
+
 .fade-enter-from,
 .fade-leave-to {
   transform: translateY(20px);

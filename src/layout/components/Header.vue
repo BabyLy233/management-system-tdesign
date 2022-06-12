@@ -1,22 +1,24 @@
 <template>
-  <t-header>
-    <t-row class="pt-4">
-      <t-col :span="4">
-        <div></div>
-      </t-col>
-      <t-col :span="2" :offset="6">
-        <div>
-          <t-avatar :image="avatarUrl" class="mr-2" size="38px" />
-          <t-dropdown :options="options" placement="bottom" :min-column-width="112" @click="clickHandler">
-            <t-button variant="text">
-              <span>用户名</span>
-              <ChevronDownIcon class="pb-1" />
-            </t-button>
-          </t-dropdown>
-        </div>
-      </t-col>
-    </t-row>
-  </t-header>
+  <t-affix ref="affix" :offset-top="0">
+    <t-header>
+      <t-row class="pt-4">
+        <t-col :span="4">
+          <div></div>
+        </t-col>
+        <t-col :span="2" :offset="6">
+          <div>
+            <t-avatar :image="avatarUrl" class="mr-2" size="38px" />
+            <t-dropdown :options="options" placement="bottom" :min-column-width="112" @click="clickHandler">
+              <t-button variant="text">
+                <span>用户名</span>
+                <ChevronDownIcon class="pb-1" />
+              </t-button>
+            </t-dropdown>
+          </div>
+        </t-col>
+      </t-row>
+    </t-header>
+  </t-affix>
 </template>
 
 <script setup lang="tsx">

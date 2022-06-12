@@ -1,10 +1,12 @@
 <template>
   <t-layout>
     <Aside />
-    <t-layout>
+    <t-layout class="s-layout">
       <Header />
-      <Content />
-      <Footer />
+      <section class="inner-layout">
+        <Content />
+        <Footer />
+      </section>
     </t-layout>
   </t-layout>
 </template>

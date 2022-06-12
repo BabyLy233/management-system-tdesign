@@ -7,9 +7,11 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TAffix: typeof import('tdesign-vue-next')['Affix']
     TAside: typeof import('tdesign-vue-next')['Aside']
     TAvatar: typeof import('tdesign-vue-next')['Avatar']
     TButton: typeof import('tdesign-vue-next')['Button']
+    TCard: typeof import('tdesign-vue-next')['Card']
     TCol: typeof import('tdesign-vue-next')['Col']
     TConfigProvider: typeof import('tdesign-vue-next')['ConfigProvider']
     TContent: typeof import('tdesign-vue-next')['Content']
