@@ -33,6 +33,7 @@ export type EChartsOption = echarts.ComposeOption<
 >;
 
 export function useDashboardChart(node: HTMLDivElement): void {
+  echarts.init(node).dispose();
   let myChart = echarts.init(node);
   let option: EChartsOption;
 
