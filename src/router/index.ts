@@ -37,7 +37,7 @@ export const defaultRouteList: RouteRecordRaw[] = [
       {
         path: ':w+',
         name: '404Page',
-        component: () => import('@/pages/cashier/index.vue'),
+        component: () => import('@/pages/error/404Page.vue'),
         meta: {
           title: '404',
         },

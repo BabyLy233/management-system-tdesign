@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     TCol: typeof import('tdesign-vue-next')['Col']
     TConfigProvider: typeof import('tdesign-vue-next')['ConfigProvider']
     TContent: typeof import('tdesign-vue-next')['Content']
+    TDivider: typeof import('tdesign-vue-next')['Divider']
     TDropdown: typeof import('tdesign-vue-next')['Dropdown']
     TextLink: typeof import('./src/components/text-link/index.vue')['default']
     TFooter: typeof import('tdesign-vue-next')['Footer']
@@ -27,6 +28,7 @@ declare module '@vue/runtime-core' {
     TMenu: typeof import('tdesign-vue-next')['Menu']
     TMenuItem: typeof import('tdesign-vue-next')['MenuItem']
     TRow: typeof import('tdesign-vue-next')['Row']
+    TTable: typeof import('tdesign-vue-next')['Table']
   }
 }
 

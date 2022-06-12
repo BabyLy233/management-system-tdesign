@@ -1,5 +1,6 @@
 .t-layout {
-  min-height: 100vh;
+  min-height: calc(100vh);
+  overflow-y: hidden;
 }
 
 .t-layout__content {
@@ -12,6 +13,12 @@
 
 .s-layout {
   height: calc(100vh - 64px);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.t-layout__header {
+  border-bottom: 1px solid #e7e7e7;
 }
 
 .t-layout__sider {
