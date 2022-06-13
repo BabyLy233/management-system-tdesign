@@ -27,6 +27,7 @@ declare module '@vue/runtime-core' {
     TLayout: typeof import('tdesign-vue-next')['Layout']
     TMenu: typeof import('tdesign-vue-next')['Menu']
     TMenuItem: typeof import('tdesign-vue-next')['MenuItem']
+    TPopconfirm: typeof import('tdesign-vue-next')['Popconfirm']
     TRow: typeof import('tdesign-vue-next')['Row']
     TTable: typeof import('tdesign-vue-next')['Table']
   }
