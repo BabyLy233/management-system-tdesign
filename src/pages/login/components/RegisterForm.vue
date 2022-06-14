@@ -119,11 +119,11 @@ const onSubmit = ({ validateResult }: SubmitContext) => {
       // 注册成功
       MessagePlugin.success('注册成功！');
       onReset();
-      emit('registerComplete')
+      emit('registerComplete');
     } else {
       // 注册失败
       MessagePlugin.warning(res.message);
-      emit('registerComplete')
+      emit('registerComplete');
     }
   });
 };

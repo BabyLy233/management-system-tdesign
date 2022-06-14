@@ -16,6 +16,7 @@ declare module '@vue/runtime-core' {
     TConfigProvider: typeof import('tdesign-vue-next')['ConfigProvider']
     TContent: typeof import('tdesign-vue-next')['Content']
     TDivider: typeof import('tdesign-vue-next')['Divider']
+    TDrawer: typeof import('tdesign-vue-next')['Drawer']
     TDropdown: typeof import('tdesign-vue-next')['Dropdown']
     TextLink: typeof import('./src/components/text-link/index.vue')['default']
     TFooter: typeof import('tdesign-vue-next')['Footer']
@@ -24,12 +25,16 @@ declare module '@vue/runtime-core' {
     THeader: typeof import('tdesign-vue-next')['Header']
     TIcon: typeof import('tdesign-vue-next')['Icon']
     TInput: typeof import('tdesign-vue-next')['Input']
+    TInputNumber: typeof import('tdesign-vue-next')['InputNumber']
     TLayout: typeof import('tdesign-vue-next')['Layout']
     TMenu: typeof import('tdesign-vue-next')['Menu']
     TMenuItem: typeof import('tdesign-vue-next')['MenuItem']
+    TPagination: typeof import('tdesign-vue-next')['Pagination']
     TPopconfirm: typeof import('tdesign-vue-next')['Popconfirm']
     TRow: typeof import('tdesign-vue-next')['Row']
+    TSwitch: typeof import('tdesign-vue-next')['Switch']
     TTable: typeof import('tdesign-vue-next')['Table']
+    TTag: typeof import('tdesign-vue-next')['Tag']
   }
 }
 

@@ -9,3 +9,17 @@ export interface registerParam {
   email: string;
   phone: string;
 }
+
+export interface getCategoryByPageParam {
+  numEachPage: number;
+  currentPage: number;
+}
+
+export interface editCategoryParam {
+  id?: number;
+  categoryName?: string;
+  imgUrl?: string;
+  categoryLevel?: number;
+  parentId?: number;
+  isHidden?: number;
+}

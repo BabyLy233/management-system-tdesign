@@ -31,11 +31,11 @@ const homeRoutes: RouteRecordRaw[] = [
         },
       },
       {
-        path: 'stock',
-        name: 'stock',
-        component: () => import('@/pages/cashier/index.vue'),
+        path: 'category',
+        name: 'category',
+        component: () => import('@/pages/category/index.vue'),
         meta: {
-          title: '库存查看',
+          title: '分类管理',
           icon: 'layers',
         },
       },
