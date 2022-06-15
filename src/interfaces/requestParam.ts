@@ -23,3 +23,11 @@ export interface editCategoryParam {
   parentId?: number;
   isHidden?: number;
 }
+
+export interface addCategoryParam {
+  categoryName?: string;
+  imgUrl?: string;
+  categoryLevel?: number;
+  parentId?: number;
+  isHidden?: number;
+}

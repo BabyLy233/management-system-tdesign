@@ -16,7 +16,7 @@ const instance = axios.create({
   headers: header,
 });
 
-if (sessionStorage.getItem('tokenInfo') !== undefined) {
+if (sessionStorage.getItem('tokenInfo') !== undefined && sessionStorage.getItem('tokenInfo') !== null) {
   const tokenInfo: tokenInfoType = JSON.parse(sessionStorage.getItem('tokenInfo') as string);
   instance.defaults.headers.common[tokenInfo?.tokenName as string] = tokenInfo?.tokenValue as string;
 }

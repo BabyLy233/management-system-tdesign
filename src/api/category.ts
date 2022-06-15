@@ -1,9 +1,11 @@
 import axios from '@/utils/request';
-import type { getCategoryByPageParam, editCategoryParam } from '@/interfaces';
+import type { getCategoryByPageParam, editCategoryParam, addCategoryParam } from '@/interfaces';
 
 enum API {
   getCategoryByPage = '/admin/category/record',
   editCategory = '/admin/category/record',
+  addCategory = '/admin/category/record/add',
+  delCategory = '/admin/category/record',
 }
 
 export function getCategoryByPage(param: getCategoryByPageParam) {
@@ -12,4 +14,12 @@ export function getCategoryByPage(param: getCategoryByPageParam) {
 
 export function editCategory(param: editCategoryParam) {
   return axios.put(API.editCategory, param);
+}
+
+export function addCategory(param: addCategoryParam) {
+  return axios.post(API.addCategory, param);
+}
+
+export function delCategory(param: number) {
+  return axios.delete(API.delCategory + `/${param}`);
 }

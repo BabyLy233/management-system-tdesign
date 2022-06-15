@@ -73,7 +73,9 @@ const onSubmit = ({ validateResult }: SubmitContext) => {
     }
     userStore.afterLogin(res.data);
     MessagePlugin.success(res.message);
-    router.replace('/home');
+    setTimeout(() => {
+      location.href = '/';
+    }, 1000);
   });
 };
 </script>

@@ -1,10 +1,7 @@
 <template>
   <div>
-    <t-drawer v-model:visible="visible" header="分类编辑" :on-confirm="handleConfirm" @close="handleClose">
+    <t-drawer v-model:visible="visible" header="添加分类" :on-confirm="handleConfirm" @close="handleClose">
       <t-form ref="form" :data="formData" :colon="true" :rules="rules">
-        <t-form-item label="分类ID" name="id">
-          <t-input v-model="formData.id" disabled />
-        </t-form-item>
         <t-form-item label="分类名称" name="categoryName">
           <t-input v-model="formData.categoryName" placeholder="请输入分类名称"></t-input>
         </t-form-item>
@@ -26,13 +23,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onUpdated } from 'vue';
+import { ref, reactive } from 'vue';
 import { MessagePlugin } from 'tdesign-vue-next';
-import type { categoryData } from '@/interfaces';
-import { editCategory } from '@/api/category';
+import { addCategory } from '@/api/category';
 
-interface editCategory {
-  id?: number;
+const emit = defineEmits(['addSuccess']);
+
+const form = ref(null);
+const visible = ref<boolean>(false);
+
+interface addCategory {
   categoryName?: string;
   imgUrl?: string;
   categoryLevel?: number;
@@ -40,34 +40,18 @@ interface editCategory {
   isHidden?: boolean;
 }
 
-const emit = defineEmits(['editSuccess']);
-const form = ref(null);
-const props = defineProps(['categoryInfo']);
-const formData = reactive<editCategory>({
-  id: 0,
+const formData = reactive<addCategory>({
   categoryName: '',
   imgUrl: '',
-  categoryLevel: 0,
+  categoryLevel: 1,
   parentId: 0,
-  isHidden: false,
+  isHidden: true,
 });
 
 const rules = {
   categoryName: [{ required: true, message: '请填写分类名称', type: 'error', trigger: 'blur' }],
   imgUrl: [{ required: true, message: '请填写分类图片地址', type: 'error', trigger: 'blur' }],
 };
-
-onUpdated(() => {
-  const categoryInfo: categoryData = props.categoryInfo;
-  formData.id = categoryInfo.id;
-  formData.categoryName = categoryInfo.categoryName;
-  formData.imgUrl = categoryInfo.imgUrl;
-  formData.categoryLevel = categoryInfo.categoryLevel;
-  formData.parentId = categoryInfo.parentId;
-  formData.isHidden = categoryInfo.isHidden === 0 ? true : false;
-});
-
-const visible = ref<boolean>(false);
 
 defineExpose({
   visible,
@@ -77,8 +61,7 @@ const handleConfirm = () => {
   if (formData.categoryName === '' || formData.imgUrl === '') {
     return;
   }
-  editCategory({
-    id: formData.id,
+  addCategory({
     categoryName: formData.categoryName,
     imgUrl: formData.imgUrl,
     categoryLevel: formData.categoryLevel,
@@ -86,17 +69,22 @@ const handleConfirm = () => {
     isHidden: formData.isHidden ? 0 : 1,
   }).then((res) => {
     if (!res.data) {
-      MessagePlugin.error('商品分类编辑失败！');
+      MessagePlugin.error('商品分类添加失败！');
       return;
     }
-    MessagePlugin.success('编辑成功！');
+    MessagePlugin.success('添加成功！');
     visible.value = false;
-    emit('editSuccess');
+    emit('addSuccess');
   });
 };
 
 const handleClose = () => {
   // @ts-ignore
   form.value.reset();
+  formData.categoryName = '';
+  formData.imgUrl = '';
+  formData.categoryLevel = 1;
+  formData.parentId = 0;
+  formData.isHidden = true;
 };
 </script>
