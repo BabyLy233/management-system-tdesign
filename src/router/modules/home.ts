@@ -40,21 +40,21 @@ const homeRoutes: RouteRecordRaw[] = [
         },
       },
       {
+        path: 'good-list',
+        name: 'good-list',
+        component: () => import('@/pages/good-list/index.vue'),
+        meta: {
+          title: '商品管理',
+          icon: 'control-platform',
+        },
+      },
+      {
         path: 'orders',
         name: 'orders',
         component: () => import('@/pages/cashier/index.vue'),
         meta: {
           title: '订单查询',
           icon: 'root-list',
-        },
-      },
-      {
-        path: 'today-sale',
-        name: 'today-sale',
-        component: () => import('@/pages/cashier/index.vue'),
-        meta: {
-          title: '今日销售商品',
-          icon: 'control-platform',
         },
       },
       {

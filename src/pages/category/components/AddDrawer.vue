@@ -1,6 +1,12 @@
 <template>
   <div>
-    <t-drawer v-model:visible="visible" header="添加分类" :on-confirm="handleConfirm" @close="handleClose">
+    <t-drawer
+      v-model:visible="visible"
+      header="添加分类"
+      size="medium"
+      :on-confirm="handleConfirm"
+      @close="handleClose"
+    >
       <t-form ref="form" :data="formData" :colon="true" :rules="rules">
         <t-form-item label="分类名称" name="categoryName">
           <t-input v-model="formData.categoryName" placeholder="请输入分类名称"></t-input>
@@ -74,6 +80,7 @@ const handleConfirm = () => {
     }
     MessagePlugin.success('添加成功！');
     visible.value = false;
+    handleClose();
     emit('addSuccess');
   });
 };

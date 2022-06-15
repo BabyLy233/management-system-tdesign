@@ -38,7 +38,7 @@ instance.interceptors.response.use(
     return response.data as responseData;
   },
   function (error) {
-    MessagePlugin.warning(error);
+    MessagePlugin.warning(error.message);
     Nprogress.done();
     return Promise.reject(error);
   },

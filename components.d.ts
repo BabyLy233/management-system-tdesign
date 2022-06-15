@@ -33,6 +33,7 @@ declare module '@vue/runtime-core' {
     TPagination: typeof import('tdesign-vue-next')['Pagination']
     TPopconfirm: typeof import('tdesign-vue-next')['Popconfirm']
     TRow: typeof import('tdesign-vue-next')['Row']
+    TSelect: typeof import('tdesign-vue-next')['Select']
     TSwitch: typeof import('tdesign-vue-next')['Switch']
     TTable: typeof import('tdesign-vue-next')['Table']
     TTag: typeof import('tdesign-vue-next')['Tag']

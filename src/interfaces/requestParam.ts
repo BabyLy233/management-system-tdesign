@@ -31,3 +31,31 @@ export interface addCategoryParam {
   parentId?: number;
   isHidden?: number;
 }
+
+export interface getGoodsByPageParam {
+  numEachPage: number;
+  currentPage: number;
+  goodName?: string;
+  status?: number;
+}
+
+export interface editGoodParam {
+  id?: number;
+  goodName?: string;
+  imgUrl?: string;
+  goodCategory?: number;
+  goodStock?: number;
+  isHidden?: number;
+  oprice?: number;
+  cprice?: number;
+}
+
+export interface addGoodParam {
+  goodName?: string;
+  imgUrl?: string;
+  goodCategory?: number;
+  goodStock?: number;
+  isHidden?: number;
+  oprice?: number;
+  cprice?: number;
+}

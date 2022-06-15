@@ -1,6 +1,12 @@
 <template>
   <div>
-    <t-drawer v-model:visible="visible" header="分类编辑" :on-confirm="handleConfirm" @close="handleClose">
+    <t-drawer
+      v-model:visible="visible"
+      header="分类编辑"
+      size="medium"
+      :on-confirm="handleConfirm"
+      @close="handleClose"
+    >
       <t-form ref="form" :data="formData" :colon="true" :rules="rules">
         <t-form-item label="分类ID" name="id">
           <t-input v-model="formData.id" disabled />
