@@ -22,15 +22,6 @@ const homeRoutes: RouteRecordRaw[] = [
         },
       },
       {
-        path: 'cashier',
-        name: 'cashier',
-        component: () => import('@/pages/cashier/index.vue'),
-        meta: {
-          title: '收银台',
-          icon: 'money-circle',
-        },
-      },
-      {
         path: 'category',
         name: 'category',
         component: () => import('@/pages/category/index.vue'),
