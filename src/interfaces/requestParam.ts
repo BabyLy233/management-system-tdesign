@@ -59,3 +59,21 @@ export interface addGoodParam {
   oprice?: number;
   cprice?: number;
 }
+
+export interface getEmployeeByPageParam {
+  numEachPage: number;
+  currentPage: number;
+  username?: string;
+}
+
+export interface getMemberByPage {
+  numEachPage: number;
+  currentPage: number;
+}
+
+export interface getOrderByPage {
+  numEachPage: number;
+  currentPage: number;
+  orderId?: string;
+  orderStatus?: number;
+}

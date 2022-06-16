@@ -29,3 +29,39 @@ export interface goodData {
   oprice?: number;
   cprice?: number;
 }
+
+export interface employeeData {
+  id?: number;
+  username?: string;
+  passwordMd5?: string;
+  email?: string;
+  phone?: string;
+  createTime?: string;
+  updateTime?: string;
+  isDel?: number;
+}
+
+export interface memberData {
+  id?: string;
+  openId?: string;
+  nickname?: string;
+  avatarUrl?: string;
+  phone?: string;
+  passwordMd5?: string;
+  createTime?: string;
+  updateTime?: string;
+  isDel?: string;
+}
+
+export interface orderData {
+  id?: number;
+  orderId?: string;
+  userId?: number;
+  orderItem?: string;
+  orderStatus?: number;
+  oprice?: number;
+  cprice?: number;
+  createTime?: string;
+  updateTime?: string;
+  isDel?: string;
+}
