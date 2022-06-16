@@ -10,7 +10,7 @@
             <t-avatar :image="avatarUrl" class="mr-2" size="38px" />
             <t-dropdown :options="options" placement="bottom" :min-column-width="112" @click="clickHandler">
               <t-button variant="text">
-                <span>用户名</span>
+                <span>{{ userStore.userInfo.username }}</span>
                 <ChevronDownIcon class="pb-1" />
               </t-button>
             </t-dropdown>
@@ -23,8 +23,13 @@
 
 <script setup lang="tsx">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import type { DropdownOption } from 'tdesign-vue-next';
 import { ChevronDownIcon, UserCircleIcon, PoweroffIcon } from 'tdesign-icons-vue-next';
+import { useUserStore } from '@/stores';
 
+const router = useRouter();
+const userStore = useUserStore();
 const avatarUrl = ref<string>('https://pic.imgdb.cn/item/62a466830947543129b5f22e.jpg');
 const options = [
   {
@@ -51,5 +56,12 @@ const options = [
   },
 ];
 
-const clickHandler = () => {};
+const clickHandler = (dropdownItem: DropdownOption) => {
+  if (dropdownItem.value === 2) {
+    userStore.logout();
+    setTimeout(() => {
+      location.href = '/login';
+    }, 800);
+  }
+};
 </script>

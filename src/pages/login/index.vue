@@ -14,7 +14,7 @@
         </p>
       </div>
       <LoginForm v-if="formType === 'login'" />
-      <RegisterForm v-else />
+      <RegisterForm v-else @register-complete="registerComplete" />
     </div>
   </div>
 </template>
@@ -28,6 +28,10 @@ import TextLink from '@/components/text-link/index.vue';
 import { appTitle, appVersion } from '@/utils/constant';
 
 const formType = ref<string>('login');
+
+const registerComplete = () => {
+  formType.value = 'login';
+};
 
 NotifyPlugin('info', {
   duration: 10000,
