@@ -43,7 +43,7 @@
           {{ dayjs(row.createTime).format('YYYY-MM-DD HH:mm:ss') }}
         </template>
         <template #operator="{ row }">
-          <t-button variant="text" theme="primary">
+          <t-button variant="text" theme="primary" @click="showDetail(row)">
             <template #icon>
               <BulletpointIcon />
             </template>
@@ -65,6 +65,7 @@
       </t-table>
       <t-pagination v-model="current" v-model:pageSize="pageSize" :total="totalNum" @change="onChange" />
     </t-card>
+    <DetailDrawer ref="detailDrawer" :detailJson="detailJson" />
   </div>
 </template>
 
@@ -74,7 +75,10 @@ import { BulletpointIcon, CloseIcon, NotificationIcon, SearchIcon } from 'tdesig
 import dayjs from 'dayjs';
 import { getOrderByPage } from '@/api/order';
 import type { orderData } from '@/interfaces';
+import DetailDrawer from './components/DetailDrawer.vue';
 
+const detailDrawer = ref();
+const detailJson = ref<orderData>();
 const current = ref<number>(1);
 const pageSize = ref<number>(5);
 const totalNum = ref<number>(0);
@@ -91,6 +95,11 @@ const statusOption = [
   { label: '已签收', value: 4 },
   { label: '已取消', value: 5 },
 ];
+
+const showDetail = (rowInfo: any) => {
+  detailJson.value = rowInfo;
+  detailDrawer.value.visible = true;
+};
 
 const fetchData = (p: number = 5, c: number = 1) => {
   if (c === 1 || p === 5) {
