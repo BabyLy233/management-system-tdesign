@@ -1,24 +1,34 @@
-# 南京林业大学 数据库课程设计
-## 超市管理系统软件 - 前端部分
+# 中后台管理系统
 
----
+# management-system-tdesign
 
-## 技术选型
-> 基于前端 [工程化，模块化，组件化] 开发大背景下，本次课程设计源代码的前端项目部分基本选择未来主流方向的技术，以提前适应新技术下的项目开发流程
+## 前端
 
-> 因为要开发的是一个中后台管理系统，所以方向选择为 SPA (Single Page Application) 单页面应用程序。本项目基于 create-vue 模板搭建，Vite 构建
-- MVVM 框架 - `vue ^ 3.2.36`
-- 路由库 - `vue-router ^ 4.0.15`
-- 状态管理库 - `pinia ^ 2.0.14`
-- 组件库 - `tdesign-vue-next ^ 0.15.4`
-- 网络请求库 - `axios ^ 0.27.2`
-- 类型检查 - `typescript ^ 4.7.2`
-- CSS 原子开发库 - `windicss ^ 3.5.4`
-- 预处理 CSS - `sass ^ 1.52.3`
-- 代码质量检查 - `eslint ^ 8.5.0`
-- 代码格式化 - `prettier ^ 2.5.1`
-- 构建过程 - `vite ^ 2.9.9`
+### 项目依赖
 
-## 项目结构
+使用 `pnpm` 构建
 
-## 快速启动
+- vite ^2.9.9
+- vue ^3.2.36
+- vue-router ^4.0.15
+- pinia ^2.0.14
+- axios ^0.27.2
+- tdesign-vue-next 0.17.4
+- tdesign-icons-vue-next ^0.1.1
+
+### 项目结构
+
+
+
+### 快速启动
+
+```bash
+git clone https://github.com/BabyLy233/management-system-tdesign.git
+
+cd management-system-tdesign
+
+pnpm install
+
+pnpm run dev
+```
+

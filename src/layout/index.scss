@@ -1,5 +1,5 @@
 .t-layout {
-  min-height: calc(100vh);
+  min-height: 100vh;
   overflow-y: hidden;
 }
 
@@ -28,6 +28,25 @@
 .inner-layout {
   height: calc(100vh - 64px);
   overflow-y: scroll;
+}
+
+.logo-img {
+  padding-top: 13px;
+  width: 232px;
+  height: 100px;
+}
+
+.header-row {
+  padding-top: 13px;
+
+  .github-icon {
+    padding-top: 5px;
+    margin-right: 20px;
+  }
+
+  .header-avatar {
+    margin-right: 0.2rem;
+  }
 }
 
 .fade-enter-from,

@@ -1,7 +1,7 @@
 <template>
   <div id="page-login">
     <div class="comp-loginForm rounded-3xl">
-      <div class="div-title text-3xl font-bold leading-relaxed">
+      <div class="div-title text-2xl font-bold leading-relaxed">
         <h2>{{ formType === 'login' ? '登录' : '注册' }}</h2>
         <h2>{{ appTitle }}</h2>
       </div>

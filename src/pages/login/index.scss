@@ -1,11 +1,12 @@
 #page-login {
   min-height: 100vh;
   background-image: url('@/assets/login-bg.jpg');
-  padding-top: 10rem;
 
   .comp-loginForm {
+    position: relative;
+    top: 8rem;
     margin-left: 15rem;
-    width: 450px;
+    width: 23rem;
     background-color: #ffffff60;
     padding: 50px;
   }

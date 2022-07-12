@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "yarn",
-    "serve": "yarn dev",
     "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
@@ -19,7 +17,7 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.0.14",
     "tdesign-icons-vue-next": "^0.1.1",
-    "tdesign-vue-next": "^0.15.4",
+    "tdesign-vue-next": "0.17.4",
     "vue": "^3.2.36",
     "vue-router": "^4.0.15"
   },
@@ -38,6 +36,7 @@
     "prettier": "^2.5.1",
     "sass": "^1.52.3",
     "typescript": "~4.7.2",
+    "unocss": "^0.44.1",
     "unplugin-auto-import": "^0.8.7",
     "unplugin-vue-components": "^0.19.6",
     "vite": "^2.9.9",

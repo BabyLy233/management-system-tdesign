@@ -12,16 +12,16 @@
         <template #logo>
           <img
             class="cursor-pointer logo-img"
-            src="@/assets/ly-logo.png"
+            src="@/assets/ccit.png"
             alt="logo"
             height="64px"
             @click="goHome(router)"
           />
         </template>
         <template #operations>
-          <span class="text-indigo-500 text-lg">
+          <p class="text-indigo-500 text-lg text-center">
             {{ appTitle + '&emsp;' + appVersion }}
-          </span>
+          </p>
         </template>
         <t-menu-item :value="item.name" v-for="item in menuItems">
           <template #icon>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="page-404">
     <img src="@/assets/404.png" alt="404Img" class="img-404" />
     <t-button theme="primary" @click="goHome(router)">
       <template #icon>
